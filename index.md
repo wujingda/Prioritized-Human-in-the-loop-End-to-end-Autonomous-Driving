@@ -9,7 +9,7 @@ Reinforcement learning requires skillful definition and remarkable computational
 
 ## Results
 
-The visualization results of different driving policies are presented.
+The visualization results of the end-to-end driving policies based on the proposed PHIL-TD3 are presented.
 
 ### Left-turn Scenario
 
