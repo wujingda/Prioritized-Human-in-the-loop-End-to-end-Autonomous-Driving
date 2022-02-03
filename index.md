@@ -9,7 +9,7 @@ Reinforcement learning requires skillful definition and remarkable computational
 
 ## Results
 
-The visualization results of different driving policies are presented. The videos are played at 2x speed.
+The visualization results of different driving policies are presented.
 
 ### Left-turn Scenario
 
