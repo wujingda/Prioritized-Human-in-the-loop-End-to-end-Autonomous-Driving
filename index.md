@@ -20,7 +20,7 @@ The visualization results of different driving policies are presented.
 
 ### Congestion Road Scenario
 
-| Expert Prior RL | Behavior Cloning |
+| Scene 1 | Scene2 |
 |:---------------:|:----------------:|
 | <video muted controls width=380> <source src="./src/CongestionRoad1.mp4"  type="video/mp4"> </video> | <video muted controls width=380> <source src="./src/CongestionRoad2.mp4"  type="video/mp4"> </video> | 
 
