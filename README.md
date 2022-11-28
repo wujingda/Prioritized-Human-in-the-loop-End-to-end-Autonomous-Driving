@@ -23,6 +23,6 @@ python train_leftturn.py
 
 ## Training performance of different algorithms
 
-<img src="results.png" width = "600" height = "400" alt=" " align=center />
+<img src="results.png" width = "500" height = "400" alt=" " align=center />
 
 
