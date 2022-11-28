@@ -29,5 +29,18 @@ python train_leftturn.py
 <img src="figures/results.png" width = "500" height = "400" alt=" " align=center />
 
 
+## Reference
+If you find this repo to be useful in your research, please consider citing our work
+```
+@ARTICLE{9793564,
+  author={Wu, Jingda and Huang, Zhiyu and Huang, Wenhui and Lv, Chen},
+  journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+  title={Prioritized Experience-Based Reinforcement Learning With Human Guidance for Autonomous Driving}, 
+  year={2022},
+  doi={10.1109/TNNLS.2022.3177685}}
+```
+
+## License
+This repo is released under GNU GPLv3 License.
 
 
