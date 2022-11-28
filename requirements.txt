@@ -1,0 +1,8 @@
+ConfigParser==5.3.0
+cpprb==10.6.4
+matplotlib==3.5.1
+numpy==1.21.5
+opencv_python==4.2.0.34
+pygame==1.9.6
+scipy==1.7.3
+torch==1.12.0
