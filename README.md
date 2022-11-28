@@ -22,7 +22,7 @@ python train_leftturn.py
 
 ## Provide human guidance to improve RL training performance (by joystick or keyboard)
 
-![figures/human_guidance.gif]()
+![image](figures/human_guidance.gif)
 
 ## Training performance of different algorithms
 
