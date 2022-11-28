@@ -67,16 +67,16 @@ class DRL:
             
     def learn(self, batch_size = BATCH_SIZE, epoch=0):
 
-        ## batched state, batched action, batched action from expert, batched intervention signal, batched reward, batched next state
+        ## batched state, batched action, batched action from human, batched human intervention signal, batched reward, batched next state
         data = self.replay_buffer.sample(batch_size)
         idxs = data['indexes']
-        states, actions, actions_exp = data['obs'], data['act'], data['acte']
+        states, actions, actions_h = data['obs'], data['act'], data['acte']
         interv, rewards = data['intervene'], data['rew']
         next_states, dones = data['next_obs'], data['done']
         
         states = torch.FloatTensor(states).permute(0,3,1,2).to(self.device)
         actions = torch.FloatTensor(actions).to(self.device)
-        actions_exp = torch.FloatTensor(actions_exp).to(self.device)
+        actions_h = torch.FloatTensor(actions_h).to(self.device)
         rewards = torch.FloatTensor(rewards).to(self.device)
         next_states = torch.FloatTensor(next_states).permute(0,3,1,2).to(self.device)
         dones = torch.FloatTensor(dones).to(self.device)
@@ -105,14 +105,16 @@ class DRL:
         ## update the actor
         if self.itera % self.policy_freq == 0:
             
+            ## select those human guided data index
             index_imi, _ = np.where(interv==1)
             states_imi = states[index_imi]
             actions_imi = actions[index_imi]
             pred_actions = self.actor.forward(states)
             
             if len(index_imi) > 0:
+                ## calculate the behavior-cloning (BC) objective for imitating human actions when aviliable.
                 imitation_loss = 3 * ((self.actor.forward(states_imi) - actions_imi)**2).sum()
-                
+                ## calculate q-advantage metric
                 with torch.no_grad():
                     q_adv = torch.exp( self.critic_target([states, actions])[0] - self.critic_target([states, pred_actions])[0])
                     q_weight = torch.zeros_like(q_adv)
@@ -144,6 +146,7 @@ class DRL:
         
         self.itera += 1
         
+        # TDQA priority calculation
         priorities = td_errors + qa_errors
         priorities = priorities.cpu().numpy()
 
