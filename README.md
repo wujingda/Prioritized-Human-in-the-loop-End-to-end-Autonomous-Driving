@@ -30,6 +30,8 @@ The algorithms in this repo allow human subjects to provide guidance for improvi
 
 <img src="figures/results.png" width = "500" height = "400" alt=" " align=center />
 
+(a-b) Results in the left-turn scenario;
+(c-d) Results in the traffic-jam scenario.
 
 ## Reference
 If you find this repo to be useful in your research, please consider citing our work
