@@ -22,9 +22,9 @@ def train_leftturn_task():
     # construct the DRL agent
     if args.algorithm == 0:
         from algo.TD3PHIL import DRL
-        log_dir = 'algo/checkpoints/TD3jingda.pth'
+        log_dir = 'algo/checkpoints/TD3PHIL.pth'
     elif args.algorithm == 1:
-        from algo.TD3IARL1 import DRL
+        from algo.TD3IARL import DRL
         log_dir = 'algo/checkpoints/TD3IARL.pth'
     elif args.algorithm == 2:
         from algo.TD3 import DRL
@@ -32,21 +32,7 @@ def train_leftturn_task():
     elif args.algorithm == 3:
         from algo.TD3 import DRL    
         log_dir = 'algo/checkpoints/TD3.pth'
-    
-    
-    # if replay_mechansim == 'Proposed':
-    #     pass
-    # elif replay_mechansim == 'TD'
-    #     from algo.TD3PHILTD import DRL    
-    #     log_dir = 'algo/checkpoints/TD3PHILTD.pth'
-    # elif algorithm == 6:
-    #     from algo.TD3DDPHIL import DRL   
-    #     log_dir = 'algo/checkpoints/TD3DDPHIL.pth'
-    # else:
-    #     from algo.TD3DD import DRL   
-    #     log_dir = 'algo/checkpoints/TD3DD.pth'
 
-    
     env = LeftTurn(joystick_enabled = args.joystick_enabled, conservative_surrounding = args.simulator_conservative_surrounding, 
                    frame=args.simulator_render_frequency, port=args.simulator_port)
 
@@ -211,14 +197,6 @@ def train_leftturn_task():
             dura = env.terminate_position
             total_step += 1
             step += 1
-
-    
-        # plt.subplot(211)
-        # plt.plot(reward_e_record[i])
-        # plt.plot(reward_i_record[i])
-        # plt.subplot(212)
-        # plt.plot(adopted_action[i])
-        # plt.show()
         
         mean_reward =  ep_reward / step  
         episode_total_reward_list.append(ep_reward)
