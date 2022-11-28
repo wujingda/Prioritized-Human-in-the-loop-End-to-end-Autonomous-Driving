@@ -15,7 +15,7 @@ https://carla.readthedocs.io/en/latest/start_quickstart/#a-debian-carla-installa
 ```shell
 pip install -r requirements.txt
 ```
-3. Run the training procedure of the left-turn task
+3. Training the RL agent in the left-turn scenario
 ```
 python train_leftturn.py
 ```
