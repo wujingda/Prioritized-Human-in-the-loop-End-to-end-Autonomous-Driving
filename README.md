@@ -20,9 +20,10 @@ pip install -r requirements.txt
 python train_leftturn.py
 ```
 
-## Use human guidance to improve RL performance (by a joystick or keyboard)
+## Using human guidance to improve RL performance (by joystick or keyboard)
 
-![image](figures/human_guidance.gif "This algorithm allows human to provide guidance for improving RL training performance (by joystick or keyboard)")
+![image](figures/human_guidance.gif)
+The algorithms in this repo allow human subjects to provide guidance for improving RL training performance in the real-time (by joystick or keyboard)
 
 ## Training performance
 
