@@ -21,6 +21,10 @@ pip install -r requirements.txt
 ```
 python train_leftturn.py
 ```
+3. Training the RL agent in the congestion scenario
+```
+python train_congestion.py
+```
 
 ## Using human guidance to improve RL performance (by joystick or keyboard)
 
