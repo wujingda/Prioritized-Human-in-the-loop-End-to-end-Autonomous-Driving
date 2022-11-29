@@ -37,7 +37,7 @@ else:
 
 
 screen_width, screen_height = 1280, 720
-WIDTH, HEIGHT, PACK = 80, 45, 4
+WIDTH, HEIGHT = 80, 45
 FULLGREEN = (0, 255, 0)
 FULLRED = (255, 0, 0)
 FULLBLUE = (0, 0, 255)
