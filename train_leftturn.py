@@ -187,16 +187,15 @@ def train_leftturn_task():
             reward_i_record[i].append(reward_i)
             
             adopted_action[i].append(action)
-    
-            
 
             observation = observation_.copy()
             state = state_.copy()
             
-            
             dura = env.terminate_position
             total_step += 1
             step += 1
+            
+            signal.signal(signal.SIGINT, signal_handler)
         
         mean_reward =  ep_reward / step  
         episode_total_reward_list.append(ep_reward)
@@ -218,8 +217,6 @@ def train_leftturn_task():
         writer.add_scalar('loss/loss_critic', round(np.average(c_loss),4), i)
         writer.add_scalar('loss/loss_actor', round(np.average(a_loss),4), i)
         
-    
-    signal.signal(signal.SIGINT, signal_handler)
     
     print('total time:',time.perf_counter()-start_time)        
     
