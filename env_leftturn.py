@@ -21,11 +21,10 @@ import math
 import cv2
 import re
 import sys
-
-sys.path.append('C:\\Users\RRC4\Downloads\CARLA_0.9.9.4\WindowsNoEditor\PythonAPI\carla\dist\carla-0.9.9-py3.7-win-amd64.egg')
-sys.path.append('C:\\Users\RRC4\Downloads\CARLA_0.9.9.4\WindowsNoEditor\PythonAPI\carla')
-# sys.path.append('/home/rrc4/Downloads/carla0.9.9/PythonAPI/carla/dist/carla-0.9.9-py3.7-linux-x86_64.egg')
-# sys.path.append('/home/rrc4/Downloads/carla0.9.9/PythonAPI/carla')
+'''
+Add your path of the CARLA simulator below.
+'''
+sys.path.append('xxx/carla-0.9.X-py3.X-linux-x86_64.egg')
 
 import carla
 from carla import ColorConverter as cc
