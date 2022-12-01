@@ -240,7 +240,7 @@ if __name__ == "__main__":
     # Arguments
     parser = argparse.ArgumentParser(description='Training')
     parser.add_argument('--algorithm', type=int, help='RL algorithm (0 for Proposed, 1 for IARL, 2 for HIRL, 3 for Vanilla TD3) (default: 0)', default=0)
-    parser.add_argument('--human_model', action="store_true", help='whehther to use human behavior model (default: True)', default=True)
+    parser.add_argument('--human_model', action="store_true", help='whehther to use human behavior model (default: False)', default=False)
     parser.add_argument('--human_model_update', action="store_true", help='whehther to update human behavior model (default: False)', default=False)
     parser.add_argument('--maximum_episode', type=float, help='maximum training episode number (default:400)', default=400)
     parser.add_argument('--seed', type=int, help='fix random seed', default=2)
