@@ -24,9 +24,9 @@ NOISE_CLIP = 0.5
 
 class DRL:
         
-    def __init__(self, action_dim, state_dim, LR_C = LR_C, LR_A = LR_A):
+    def __init__(self, action_dim, state_dim, device='cuda', LR_C = LR_C, LR_A = LR_A):
 
-        self.device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+        self.device = device
         
         self.state_dim = state_dim[0] * state_dim[1] * 2
         self.state_dim_width = state_dim[0]
