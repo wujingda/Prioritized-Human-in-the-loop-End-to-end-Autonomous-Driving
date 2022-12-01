@@ -61,7 +61,7 @@ def train_congestion_task():
     if args.human_model:
         from algo.SL import SL
         SL = SL(a_dim, s_dim)
-        SL.load_model('./algo/models_leftturn/SL.pkl')
+        SL.load_model('./algo/models_congestion/SL0.pkl')
     
     
     # initialize measurable variables
