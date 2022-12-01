@@ -250,7 +250,6 @@ if __name__ == "__main__":
     parser.add_argument('--resume', action="store_true", help='whether to resume trained agents (default: False)', default=False)
     parser.add_argument('--warmup', action="store_true", help='whether to start training until collecting enough data (default: False)', default=False)
     parser.add_argument('--warmup_threshold', type=int, help='warmup length by step (default: 1e4)', default=1e4)
-    parser.add_argument('--pid_controller_guidance', action="store_true", help='whether to use PID controller providing guidance action (default: False)', default=False)
     parser.add_argument('--reward_shaping', type=int, help='reward shaping scheme (0: none; 1:proposed) (default: 1)', default=1)
     parser.add_argument('--device', type=str, help='run on which device (default: cuda)', default='cuda')
     parser.add_argument('--simulator_port', type=int, help='Carla port value which needs specifize when using multiple CARLA clients (default: 2000)', default=2000)
