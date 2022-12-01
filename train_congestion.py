@@ -24,9 +24,9 @@ def train_congestion_task():
     # construct the DRL agent
     if args.algorithm == 0:
         from algo.TD3PHIL import DRL
-        log_dir = 'algo/checkpoints/TD3jingda.pth'
+        log_dir = 'algo/checkpoints/TD3PHIL.pth'
     elif args.algorithm == 1:
-        from algo.TD3IARL1 import DRL
+        from algo.TD3IARL import DRL
         log_dir = 'algo/checkpoints/TD3IARL.pth'
     elif args.algorithm == 2:
         from algo.TD3 import DRL
