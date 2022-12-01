@@ -39,7 +39,7 @@ def train_leftturn_task():
     s_dim = [env.observation_size_width, env.observation_size_height]
     a_dim = env.action_size
     
-    DRL = DRL(a_dim, s_dim)
+    DRL = DRL(a_dim, s_dim, device=args.device)
     
     exploration_rate = args.initial_exploration_rate 
     
