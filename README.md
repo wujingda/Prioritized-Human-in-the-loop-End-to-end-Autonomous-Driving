@@ -20,38 +20,38 @@ pip install -r requirements.txt
 3. Training the RL agent in the left-turn scenario
 ```
 python train_leftturn.py
---algorithm 0 \
---human_model \
---reward_shaping 0 \
---seed 123 \
---maximum_episode 400 \
---initial_exploration_rate 0.5 \
---cutoff_exploration_rate 0.05 \
---exploration_decay_rate 0.99988 \
---warmup \
---warmup_threshold 1e4 \
---device cuda \
---simulator_port 2000 \
---simulator_render_frequency 12 \
+--algorithm 0 
+--human_model 
+--reward_shaping 0 
+--seed 123 
+--maximum_episode 400 
+--initial_exploration_rate 0.5 
+--cutoff_exploration_rate 0.05 
+--exploration_decay_rate 0.99988 
+--warmup 
+--warmup_threshold 1e4 
+--device cuda 
+--simulator_port 2000 
+--simulator_render_frequency 12 
 --joystick_enabled
 ```
 4. Training the RL agent in the congestion scenario
 ```
 python train_congestion.py
---algorithm 0 \
---human_model \
---human_model_type PI \
---reward_shaping 0 \
---seed 123 \
---maximum_episode 400 \
---initial_exploration_rate 0.5 \
---cutoff_exploration_rate 0.05 \
---exploration_decay_rate 0.99988 \
---warmup \
---warmup_threshold 1e4 \
---device cuda \
---simulator_port 2000 \
---simulator_render_frequency 12 \
+--algorithm 0 
+--human_model 
+--human_model_type PI 
+--reward_shaping 0 
+--seed 123 
+--maximum_episode 400 
+--initial_exploration_rate 0.5 
+--cutoff_exploration_rate 0.05 
+--exploration_decay_rate 0.99988 
+--warmup 
+--warmup_threshold 1e4 
+--device cuda 
+--simulator_port 2000 
+--simulator_render_frequency 12 
 --joystick_enabled
 ```
 
