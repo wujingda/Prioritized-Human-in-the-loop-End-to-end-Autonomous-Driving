@@ -1,8 +1,4 @@
-'''
-This algorithm is a HI-RL implementation on off-policy TD3 algorithm, to check the original HIRL (based on DDQN) algorithm
-you can refer to https://arxiv.org/abs/1707.05173.
-This algorithm is highly resemble to original TD3 in addition to adding a intervention-based reward shaping term in the main file (not in this algo file)
-'''
+
 import numpy as np
 import torch
 
