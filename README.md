@@ -1,4 +1,4 @@
-# Prioritized Human-In-the-Loop (PHIL) RL for End-to-end Autonomous Driving
+# Prioritized Human-In-the-Loop (PHIL) Reinforcement Learning for Behavior Planning of Autonomous Vehicles in CARLA
 
 This repo is the implementation of the following paper:
 
